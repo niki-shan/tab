@@ -1,0 +1,70 @@
+
+<div class="container m-3  p-2" >
+    <ul class="nav nav-pills bg-dark">
+         <li class="nav-item ">
+            <a href="javascript:;"
+            (click)="onclick('Angular')"
+            [ngClass]="{
+               'active' : selectedtab === 'Angular'
+            }"  class="nav-link">Angular</a>
+         </li>
+         <li class="nav-item">
+            <a href="javascript:;"
+            (click)="onclick('Node')"
+            [ngClass]="{
+               active: selectedtab === 'Node'
+            }"
+             class="nav-link">Node</a>
+         </li>
+         <li class="nav-item">
+            <a href="javascript:;"
+            (click)= "onclick('React')"
+            [ngClass]="{
+               'active' : selectedtab =='React'           
+            }"
+            class="nav-link">React</a>
+         </li>
+         <!-- <li class="nav-item">
+            <a href="javascript:;"               not work // 
+            (click)="selectedtab =='other'"       no function
+            [ngClass]="{'active' : selectedtab =='other'}" class="nav-link">other</a>
+         </li> -->
+
+         <li class="nav-item">
+            <a href="javascript:;"
+            (click)= "onclick('Other')"
+            [ngClass]="{
+               'active' : selectedtab =='Other'           
+            }"
+            class="nav-link">other</a>
+         </li>
+    </ul>
+
+    <div class="tab-body  ">
+      <div class="card bg-success" *ngIf ="selectedtab== 'Angular'">
+         <div class="card-body">
+            <strong>Angular</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae rerum dolores, architecto, inventore nemo maxime nostrum itaque accusantium est, blanditiis harum nisi ipsam quasi voluptatem cum dolore quisquam provident!
+         </div>
+      </div>
+      <div class="card bg-info" *ngIf ="selectedtab == 'Node'">
+         <div class="card-body">
+            <strong>Node</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae rerum dolores, architecto, inventore nemo maxime nostrum itaque accusantium est, blanditiis harum nisi ipsam quasi voluptatem cum dolore quisquam provident!
+         </div>
+      </div>
+      <div class="card bg-warning" *ngIf ="selectedtab == 'React'">
+         <div class="card-body">
+            <strong>React</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae rerum dolores, architecto, inventore nemo maxime nostrum itaque accusantium est, blanditiis harum nisi ipsam quasi voluptatem cum dolore quisquam provident!
+         </div>
+      </div>
+      <div class="card bg-primary"  *ngIf ="selectedtab == 'Other'">
+         <div class="card-body">
+            <strong>Other</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae rerum dolores, architecto, inventore nemo maxime nostrum itaque accusantium est, blanditiis harum nisi ipsam quasi voluptatem cum dolore quisquam provident!
+         </div>
+      </div>
+   </div>
+
+   </div>
